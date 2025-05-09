@@ -10,3 +10,6 @@ templates = Jinja2Templates(directory="app/templates")
 @app.get("/")
 def read_root():
     return {"message": "Inventory Web App - Under Construction"}
+
+from app.routes import inventory
+app.include_router(inventory.router)
